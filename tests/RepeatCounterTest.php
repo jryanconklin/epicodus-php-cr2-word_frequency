@@ -57,7 +57,7 @@
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
             $word_input = 'Saturday';
-            $phrase_input = 'The SATURDAY is the best Saturday!';
+            $phrase_input = 'The SATURDAY is the best Saturday';
             //Act
             $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
             //Assert
