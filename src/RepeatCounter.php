@@ -19,8 +19,8 @@
                 if ($word == $filter_word) {
                     $count++;
                 }
-                return $count;
             }
+            return $count;
 
 
 
