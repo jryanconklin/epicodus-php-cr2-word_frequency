@@ -54,7 +54,7 @@ __Output__: 2
 #### Specification 5 ####
 *A word in all caps will be returned*
 
-__Input__: Saturday: The SATURDAY is the best Saturday!
+__Input__: Saturday: The SATURDAY is the best Saturday
 
 __Output__: 2
 
