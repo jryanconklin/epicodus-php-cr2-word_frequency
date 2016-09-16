@@ -4,7 +4,7 @@
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_countRepeats_oneMatch()
+        function test_countRepeats_spec1_oneMatch()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -16,7 +16,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_countRepeats_multiMatch()
+        function test_countRepeats_spec2_multiMatch()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -28,7 +28,7 @@
             $this->assertEquals(2, $result);
         }
 
-        function test_countRepeats_lowerWordInput()
+        function test_countRepeats_spec3_lowerWordInput()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -40,7 +40,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_countRepeats_wordCaps()
+        function test_countRepeats_spec4_wordCaps()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -52,12 +52,24 @@
             $this->assertEquals(2, $result);
         }
 
-        function test_countRepeats_allCaps()
+        function test_countRepeats_spec5_allCaps()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
             $word_input = 'Saturday';
             $phrase_input = 'The SATURDAY is the best Saturday';
+            //Act
+            $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
+            //Assert
+            $this->assertEquals(2, $result);
+        }
+
+        function test_countRepeats_spec6_mixedCase()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word_input = 'SaTURDay';
+            $phrase_input = 'Saturday is this SATURDAY or is it?';
             //Act
             $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
             //Assert
