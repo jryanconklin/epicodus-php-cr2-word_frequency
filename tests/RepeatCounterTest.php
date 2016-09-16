@@ -1,10 +1,10 @@
 <?php
     require_once __DIR__.'/../src/RepeatCounter.php';
 
-    class RepeatCounter extends PHPUnit_Framework_TestCase
+    class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_countRepeats_oneMatch
+        function test_countRepeats_oneMatch()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -13,7 +13,7 @@
             //Act
             $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
             //Assert
-            $this->assertEquals(1, $result)
+            $this->assertEquals(1, $result);
         }
 
 
