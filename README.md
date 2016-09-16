@@ -4,7 +4,7 @@ Behavior Driven Design - Intro to PHPUnit
 *Code Review #2*
 
 ## Features ##
-The program will allow a user to input a word and phrase and return a count of the amount of times the word repeats.
+The program will allow a user to input a word and phrase and return a count of the amount of times the word repeats inside the phrase.
 
 ## Technologies ##
 
