@@ -88,6 +88,17 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_countRepeats_spec8_numbers()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word_input = 'Saturday';
+            $phrase_input = "Saturday! Saturday! Saturday? Does this Saturday work for you? Why yes this Saturday does look good to me! I'll see you Saturday.";
+            //Act
+            $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
+            //Assert
+            $this->assertEquals(6, $result);
+        }
 
 
     }
