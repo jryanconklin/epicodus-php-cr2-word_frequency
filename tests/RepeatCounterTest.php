@@ -76,6 +76,18 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_countRepeats_spec7_numbers()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word_input = '11';
+            $phrase_input = "Saturday at 11 Looks Good to Me. I'll be 11 years old!";
+            //Act
+            $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
+            //Assert
+            $this->assertEquals(2, $result);
+        }
+
 
 
     }
