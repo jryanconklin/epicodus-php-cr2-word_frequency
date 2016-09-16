@@ -10,8 +10,8 @@
     // General Methods
         function countRepeats($user_word, $user_phrase)
         {
-            $filter_word = $user_word;
-            $filter_phrase = $user_phrase;
+            $filter_word = strtolower($user_word);
+            $filter_phrase = strtolower($user_phrase);
             $filter_phrase_array = explode(' ', $filter_phrase);
             $count = 0;
 
