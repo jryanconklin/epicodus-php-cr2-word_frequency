@@ -40,6 +40,17 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_countRepeats_mixCaps()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word_input = 'Saturday';
+            $phrase_input = 'Would you like to hangout saturday the 11th? Saturday looks good to me!';
+            //Act
+            $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
+            //Assert
+            $this->assertEquals(2, $result);
+        }
 
 
     }
