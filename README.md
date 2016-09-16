@@ -1,4 +1,5 @@
-# Word Frequency # - *Code Review # 2*
+# Word Frequency #
+*Code Review # 2*
 Behavior Driven Design - Intro to PHPUnit
 
 
@@ -27,23 +28,23 @@ The program will allow a user to input a word and phrase and return a count of t
 #### Specification 1 ####
 *A word that that exists once in the phrase.*
 
-__Input__: Saturday, Saturday Looks Good To Me
+__Input__: Saturday: Saturday Looks Good To Me
 
 __Output__: 1
 
 #### Specification 2 ####
 *A word that exists multiple times in a phrase*
 
-__Input__: Saturday, Saturday Looks Good To Me Next Saturday
+__Input__: Saturday: Saturday Looks Good To Me Next Saturday
 
 __Output__: 2
 
 #### Specification 3 ####
-**
+*A word that is capitalized in one instance, but not in others.*
 
-__Input__:
+__Input__: Saturday: Would you like to hangout saturday the 11th? Saturday looks good to me!
 
-__Output__:
+__Output__: 2
 
 #### Specification 4 ####
 **
