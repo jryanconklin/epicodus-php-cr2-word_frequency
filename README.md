@@ -1,40 +1,42 @@
-# Word Frequency
+# Word Frequency # - *Code Review # 2*
 Behavior Driven Design - Intro to PHPUnit
-*Code Review # 2*
 
-## Features
+
+## Features ##
 Return the Count of a Given Word in a Phrase.
 
-## Technologies
+## Technologies ##
 
 PHP, Silex, Twig, HTML, CSS and Bootstrap.
 
-## Usage
+## Usage ##
 
 To use the code, you can clone the repository at [https://github.com/jryanconklin/epicodus-php-cr2-word_frequency](https://github.com/jryanconklin/epicodus-php-cr2-word_frequency).
 
 For best results, please:
 
-- Install Composer (available at [ https://getcomposer.org/](https://getcomposer.org/))
+- Install Composer (available at [https://getcomposer.org/](https://getcomposer.org/))
 - Clone the Repository
 - Install Silex and Twig via Composer
 - Launch Project in Server Mode
 
-## Specifications
+## Specifications ##
+
+The program will allow a user to input a word and phrase and return a count of the amount of times the word repeats.
 
 #### Specification 1 ####
-**
+*A word that that exists once in the phrase.*
 
-__Input__:
+__Input__: Saturday, Saturday Looks Good To Me
 
-__Output__:
+__Output__: 1
 
 #### Specification 2 ####
-**
+*A word that exists multiple times in a phrase*
 
-__Input__:
+__Input__: Saturday, Saturday Looks Good To Me Next Saturday
 
-__Output__:
+__Output__: 2
 
 #### Specification 3 ####
 **
