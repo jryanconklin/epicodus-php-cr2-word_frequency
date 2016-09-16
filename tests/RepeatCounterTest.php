@@ -28,6 +28,18 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_countRepeats_lowerWordInput()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word_input = 'saturday';
+            $phrase_input = 'Saturday is great!';
+            //Act
+            $result = $test_RepeatCounter->countRepeats($word_input, $phrase_input);
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
 
 
     }
