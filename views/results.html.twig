@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="Main Custom Styles">
+    <title>J. Ryan Conklin || PHP CR 2 </title>
+  </head>
+
+  <header id="top" class="mainHeader">
+    <div class="container-fluid">
+      <h1>J. Ryan Conklin</h1>
+      <h3>Epicodus: PHP Fall 2016</h3>
+    </div>
+  </header>
+
+  <body>
+    <div class="container">
+      <h4>This is Your Phrase Count!</h4>
+      <hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table table-bordered">
+            <thead class="inverse">
+              <tr>
+                <th>Original Word</th>
+                <th>Original Phrase</th>
+                <th>Word Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ newphrase.word }}</td>
+                <td>{{ newphrase.phrase }}</td>
+                <td>{{ newphrase.count }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr>
+      <form action="/">
+        <button type="submit" class="btn btn-primary">Return to Home</button>
+      </form>
+    </div> <!-- End Main Container Div -->
+
+    <footer id="#bottom" class="mainFooter">
+      <p>All Rights Reserved to J. Ryan Conklin for the Website.</p>
+      <a href="#top">Back to top &raquo;</a>
+    </footer>
+  </body>
+</html>

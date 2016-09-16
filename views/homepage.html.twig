@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="Main Custom Styles">
+    <title>J. Ryan Conklin || PHP CR 2 </title>
+  </head>
+
+  <header id="top" class="mainHeader">
+    <div class="container-fluid">
+      <h1>J. Ryan Conklin</h1>
+      <h3>Epicodus: PHP Fall 2016</h3>
+    </div>
+  </header>
+
+  <body>
+    <div class="container">
+
+      {% if phrases is not empty %}
+        <h4>Here Are Your Phrases!</h4>
+        <hr>
+        <table class="table table-bordered">
+          <thead class="inverse">
+            <tr>
+              <th>Original Word</th>
+              <th>Original Phrase</th>
+              <th>Word Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for phrase in phrases %}
+            <tr>
+              <td>{{ phrase.word }}</td>
+              <td>{{ phrase.phrase }}</td>
+              <td>{{ phrase.count }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
+      <form class="phrase" action="/count" method="post">
+        <h4>How Many Words in a Phrase? Enter Below to Find Out!</h4>
+        <hr>
+        <div class="row">
+          <div class="form-group">
+            <label for="user_word"></label>
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="user_word" placeholder="Word to Check" name="user_word">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user_phrase" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-12">
+              <textarea class="form-control" id="user_phrase" rows="3" placeholder="Phrase to Check" name="user_phrase"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <br><br><hr>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <hr>
+      <form action="/delete" method="post">
+        <button type="submit" class="btn btn-danger">Clear All Phrases</button>
+      </form>
+    </div> <!-- End Main Container Div -->
+    <footer id="#bottom" class="mainFooter">
+      <p>All Rights Reserved to J. Ryan Conklin for the Website.</p>
+      <a href="#top">Back to top &raquo;</a>
+    </footer>
+  </body>
+</html>

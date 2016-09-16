@@ -5,12 +5,14 @@
     //Properties
         private $word;
         private $phrase;
+        private $count;
 
     //Constructor
-        function __construct($user_word, $user_phrase)
+        function __construct($user_word, $user_phrase, $count = 0)
         {
             $this->word = $user_word;
             $this->phrase = $user_phrase;
+            $this->count = $count;
         }
 
     //Getter and Setter
@@ -34,6 +36,17 @@
             return $this->phrase;
         }
 
+        function setCount($new_count)
+        {
+            $this->count = $new_count;
+        }
+
+        function getCount()
+        {
+            return $this->count;
+        }
+
+
     // General Methods
         function countRepeats($user_word, $user_phrase)
         {
@@ -52,5 +65,22 @@
             }
             return $count;
         } // End of countRepeats Function
+
+        function save()
+        {
+            array_push($_SESSION['list_of_phrases'], $this);
+        }
+
+    //Static Methods
+        static function getAll()
+        {
+            return $_SESSION['list_of_phrases'];
+        }
+
+        static function deleteAll()
+        {
+            $_SESSION['list_of_phrases'] = array();
+        }
+
     } // End of Repeat Counter Class
 ?>
